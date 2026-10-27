@@ -1,5 +1,8 @@
-window.onload = function() {}
-
+window.onload = function() {
+const fontSizer = makeFontSizer();
+document.getElementById("bigger").onclick = fontSizer.bigger;
+document.getElementById("smaller").onclick = fontSizer.smaller;
+}
 function makeFontSizer(){
 let fontSize = 16
 document.body.style.fontSize = fontSize +"px";;
