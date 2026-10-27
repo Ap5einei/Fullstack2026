@@ -38,5 +38,24 @@ function makeCounter(val){
         }
     }
 }
+function start(){
+    const counter1 = makeCounter(5);
+    const counter2 = makeCounter(5);
+
+    console.log("Counter 1 value", counter1.value());
+    console.log("Counter 2 value", counter2.value());
+
+    counter1.increment();
+    counter1.increment();
+    counter1.increment();
+
+    counter2.decrement();
+    counter2.decrement();
+    counter2.decrement();
+
+    console.log("Counter 1 value", counter1.value());
+    console.log("Counter 2 value", counter2.value());
+
+}
         
 }
