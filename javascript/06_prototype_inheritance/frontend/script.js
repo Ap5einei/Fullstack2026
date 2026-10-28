@@ -17,7 +17,7 @@ function start() {
         
         let object_test = {
             myVar : 15,
-            myFunc : function() {
+            myFunction : function() {
                 return this.myVar+50;
             }
         }
@@ -38,7 +38,7 @@ function start() {
 
         let object_test2 = {
             myVar : 15,
-            myFunc : function() {
+            myFunction : function() {
                 return this.myVar+50;
             },
             myFunction2: function() {
