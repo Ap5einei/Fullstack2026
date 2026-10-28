@@ -1,4 +1,4 @@
-const exprees = requeire('express');
+const exprees = require('express');
 
 const app = express();
 app.use(express.static("frontend"));

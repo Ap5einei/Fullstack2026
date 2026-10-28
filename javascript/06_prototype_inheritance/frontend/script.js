@@ -34,4 +34,20 @@ function start() {
 
         console.log(object1.myFunction());
         console.log(object2.myFunction());
+
+
+        let object_test2 = {
+            myVar : 15,
+            myFunc : function() {
+                return this.myVar+50;
+            },
+            myFunction2: function() {
+                return this.myVar+1000;
+            }   
+        }
+        Object.setPrototypeOf(object1, object_test2);
+        Object.setPrototypeOf(object2, object_test2);
+
+        console.log(object1.myFunction2());
+        console.log(object2.myFunction2());
         };  
