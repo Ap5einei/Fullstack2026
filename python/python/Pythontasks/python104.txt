@@ -1,0 +1,32 @@
+
+PYTHON 104
+==========
+
+Tavoitteet:
+-Ymmärtää aritmetiikkaa
+
+Aritmetiikan loput tekijät
+//	jako kokonaisluvuilla
+%	modulo
+**	potenssi
+
+Python 104-1: Laske painoindeksi BMI eli paino jaettuna pituuden neliöllä (pituus metreinä).
+
+Python 104-2: Python kerro minä vuonna synnyit ja laske näin kuinka vanha olet
+
+Python 104-3: Kerro nimesi ja minä vuonna synnyit ja kirjoita seuraavaa:
+Nimesi on <nimi> ja olet <X> vuotta vanha.
+
+Python 104-4: Määritä luku ja ilmoita sen potenssi kahteen.
+
+Python 104-5: Määritä kaksi lukua ja laske niiden potenssi.
+
+Python 104-6: Kerro tietokoneelle monta päivää on kyseessä ja laske niiden minuuttien lukumäärä
+
+Python 104-7: Syötä kolme lukua ja laske niiden tulo
+
+Python 104-8: Syötä kolme lukua ja laske niiden summa
+
+Python 104-9: Syötä kolme lukua ja laske niiden keskiarvo
+
+

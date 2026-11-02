@@ -1,0 +1,20 @@
+Python 122
+==========
+
+# Tuplen muodostus
+
+tuple = (123,456)
+
+print(tuple[0])
+print(tuple[1])
+
+
+Tehtävä 122-1: Tee funktio, joka ottaa 3 parametria ja luo tuplen, johon kuuluu elementit x, y ja z.
+
+Tehtävä 122-2: Tee lista tupleja, joilla on nimi ja ikä. Hae nuorin ja vanhoin.
+
+Tehtävä 122-3: Tee lista tupleja, joilla on nimi ja ikä. Hae kaikki ikää X nuoremmat.
+ 
+Tehtävä 122-4: Tee ohjelma, jossa on dictionary, johon kuuluu nimi ja X kappaletta opintosuorituksia. 
+Tee opintosuorituksista tupleja.
+

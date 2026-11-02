@@ -1,0 +1,111 @@
+{
+    "dataset": {
+        "dimension": {
+            "Sukupuoli": {
+                "label": "Sukupuoli",
+                "category": {
+                    "index": {
+                        "ALL": 0,
+                        "1": 1,
+                        "2": 2
+                    },
+                    "label": {
+                        "ALL": "Molemmat sukupuolet",
+                        "1": "Miehet",
+                        "2": "Naiset"
+                    }
+                },
+                "extension": {
+                    "show": "value"
+                }
+            },
+            "Ik\u00e4": {
+                "label": "Ik\u00e4",
+                "category": {
+                    "index": {
+                        "0-2-VUOTIAAT": 0
+                    },
+                    "label": {
+                        "0-2-VUOTIAAT": "0-2-vuotiaat"
+                    }
+                },
+                "extension": {
+                    "show": "value"
+                }
+            },
+            "\u00c4idinkieli": {
+                "label": "\u00c4idinkieli",
+                "category": {
+                    "index": {
+                        "ALL": 0,
+                        "1": 1,
+                        "2": 2,
+                        "3": 3
+                    },
+                    "label": {
+                        "ALL": "Kaikki \u00e4idinkielet",
+                        "1": "Suomi ja saame",
+                        "2": "Ruotsi",
+                        "3": "Muu kieli"
+                    }
+                },
+                "extension": {
+                    "show": "value"
+                }
+            },
+            "Vuosi": {
+                "label": "Vuosi",
+                "category": {
+                    "index": {
+                        "23": 0
+                    },
+                    "label": {
+                        "23": "2022"
+                    }
+                },
+                "extension": {
+                    "show": "value"
+                }
+            },
+            "id": [
+                "Sukupuoli",
+                "Ik\u00e4",
+                "\u00c4idinkieli",
+                "Vuosi"
+            ],
+            "size": [
+                3,
+                1,
+                4,
+                1
+            ],
+            "role": {
+                "time": [
+                    "Vuosi"
+                ]
+            }
+        },
+        "label": "Helsinkil\u00e4isten lasten m\u00e4\u00e4r\u00e4 ik\u00e4luokittain 31.12. muuttujina Sukupuoli, Ik\u00e4, \u00c4idinkieli ja Vuosi",
+        "source": "Lasten hyvinvointi/Helsingin kaupunki",
+        "updated": "9999-12-31T21:59:59Z",
+        "value": [
+            18852,
+            13479,
+            1417,
+            3956,
+            9735,
+            6961,
+            711,
+            2063,
+            9117,
+            6518,
+            706,
+            1893
+        ],
+        "extension": {
+            "px": {
+                "decimals": 0
+            }
+        }
+    }
+}

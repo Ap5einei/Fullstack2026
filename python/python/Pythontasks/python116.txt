@@ -1,0 +1,50 @@
+python 116
+==========
+
+listat
+
+lista = []
+lista = [11,22,33]
+
+print(lista[0])
+print(len(lista[0]))
+
+Lisää listaan
+lista.append(123) # loppuun
+
+lista.insert(0,111) # (X,Y) X indeksiin Y arvo
+
+Poista listasta
+lista.pop(1) # poistaa indeksistä
+
+if 1 in lista:
+	lista.remove(1) # poistaa arvon
+
+lista.sort()
+
+uusilista = sorted(lista)
+
+max ja min funktioilla voit ottaa listan suurimman ja pienimmän arvon
+
+
+Tehtävä 116-1: Tee ohjelma, johon kuuluu lista = [0,0,0,0,0,0,0,0,0,0] syötetään indeksi 0+ ja luku arvoksi. Täytä listaa ja tulosta joka syötön jälkeen listan sisältö.
+
+Tehtävä 116-2: Tee ohjelma, johon syötetään X kappaletta numeroita. Tulosta luotu lista lopuksi.
+
+Tehtävä 116-3: Tee ohjelma, jossa on lista, johon voi lisätä ja poistaa arvoja.
+
+Tehtävä 116-4: Tee ohjelma, johon syötetään sanoja. Pysäytä se, jos sama sana tuli kahdesti.
+
+Tehtävä 116-5: Tee ohjelma, johon syötetään numeroita. Tulosta joka numeron jälkeen lista sekä sen järjestetty versio.
+
+Tehtävä 116-6: Tee ohjelma, johon syötetään numeroita. Tulosta joka numeron jälkeen suurin ja pienin arvo.
+
+Tehtävä 116-7: Tee ohjelma, jossa on funktio, joka ottaa listan parametrina. Järjestä lista ja anna se paluuarvona
+
+Tehtävä 116-8: Tee ohjelma, jossa on funktio, joka ottaa listan parametrina. palauta listan pituus paluuarvona.
+
+Tehtävä 116-9: Tee ohjelma, jossa on funktio, joka ottaa listan parametrina. palauta listan keskiarvo paluuarvona.
+
+Tehtävä 116-10: Tee ohjelma, jossa on funktio, joka ottaa listan parametrina. palauta listan vaihteluväli (suurin miinus pienin arvo) paluuarvona.
+
+

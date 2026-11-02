@@ -1,0 +1,30 @@
+PYTHON KOULUTUS
+===============
+
+Opiskelun tueksi kannattaa tutkia eri verkkosivuja oman opiskelun tueksi.
+
+Korkein totuus Pythonista löytyy sen virallisilta verkkosivuilta:
+https://docs.python.org/3/tutorial/index.html
+
+Tämä on suomenkielinen perusopas Pythonista. Se on hieman vanha mutta perusteet pitävät yhä kutinsa:
+https://www.ohjelmointiputka.net/oppaat/opas.php?tunnus=python3_01
+
+Tämä on hyvä aloituspaikka Pythonin opetteluun:
+https://www.w3schools.com/python/default.asp
+
+Tämä paikka sisältää myös hyvää tietoa Pythonista:
+https://pythonbasics.org/
+
+Eräs Pythonin vahvuuksista on valtava määrä erilaisia kirjastoja, joita voidaan 
+käyttää Pythonin laajentamiseksi:
+
+Pythonin tutorialin luvut 10 ja 11 sisältävät tärkeimmät Pythonin kirjastot:
+https://docs.python.org/3/tutorial/index.html
+
+Täältä löytyy paljon kirjastoja termillä "Python technologies":
+https://www.tutorialspoint.com/tutorialslibrary.htm
+
+Tämä on hyvä teos Pythonin kirjastojen opiskeluun:
+https://docs.python-guide.org/intro/learning/
+
+

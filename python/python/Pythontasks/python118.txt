@@ -1,0 +1,32 @@
+Python 118
+==========
+
+merkkijono = "testi"
+print(f"{merkkijono:5} pälä pälä {merkkijono:5}")
+
+liukuluku = 12345.12345
+print(f"{liukuluku:.2f} pälä pälä {liukuluku}")
+
+merkkijono = "saippuakauppias"
+print(merkkijono[0:10:2])
+
+merkkijono = "testi"
+print(merkkijono[::-1])
+
+lista = [1,2,3,4,5,6,7,8,9,10]
+print(lista[5:2:-1])
+
+merkkijono = "saippuakauppias"
+merkkijono.count("a")
+
+uusimerkkijono = merkkijono.replace("a","A")
+
+
+Tehtävä 118-1: Tee merkkijonoja listassa, esitä elementit väärinpäin ja kukin merkkijono väärinpäin
+
+Tehtävä 118-2: Ilmoita mitä kirjainta on eniten merkkijonossa...
+
+Tehtävä 118-3: Poista merkkijonosta kaikki vokaalit
+
+Tehtävä 118-4: Ilmoita numerolistan elementtien läheinen arvo (etäisyys 1)
+

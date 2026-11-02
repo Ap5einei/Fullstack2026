@@ -1,0 +1,38 @@
+Python 121
+==========
+
+# dictionary
+
+muuttuja = {}
+
+muuttuja["123"] = "Aku"
+muuttuja["456"] = "Iines"
+muuttuja["999"] = "Roope"
+
+print(muuttuja)
+print(muuttuja["123"])
+
+for avain, arvo in muuttuja.items()
+	print(f"{avain} ja {arvo}"
+
+del muuttuja["999"]
+
+
+Tehtävä 121-1: Tee funktio, jolle syötetään luku X ja funktio asettaa sille arvoksi X*123
+
+Tehtävä 121-2: Tee funktio, jolle syötetään merkkijonoja. Funktio ei salli duplikaatteja.
+
+Tehtävä 121-3: Tee funktio, jolle syötetään merkkijono. Se ottaa talteen merkkijonon kirjaimet ja tulostaa "*" merkkejä yhtä monta kertaa kuin kirjain löytyy merkkijonosta.
+
+Tehtävä 121-4: Tee ohjelma, johon syötetään puhelinnumeroita ja henkilöitä. Tulosta lopuksi kaikki tiedot.
+
+Tehtävä 121-5: Tee ohjelma, johon syötetään ja poistetaan puhelinnumeroita ja henkilöitä. Tulosta lopuksi kaikki tiedot.
+
+Tehtävä 121-6: Tee ohjelma, jolle syötetään dictionary. Muuta avaimet arvoiksi ja päinvastoin.
+
+Tehtävä 121-7: Tee ohjelma, johon syötetään kirjan nimi ja tekijä sekä vuosi niin, että kukin kirja on yksi dictionary.
+Tee lista dictionaryista ja tulosta niiden sisältö.
+
+
+
+

@@ -1,0 +1,32 @@
+Python 125
+==========
+
+Errors
+
+ValueError
+TypeError
+IndexError
+ZeroDivisionError
+
+FileNotFoundError
+io.UnsupportedOperation
+PermissionError 
+
+try:
+	jotain
+	raise ValueError("juttua...")
+	
+except FileNotFoundError:
+	jotain
+
+except TypeError:
+	jotain
+
+except:
+	jotain
+	
+Tehtävä 125-1: Lisää tiedoston käsittelyyn try - except rakenne
+
+Tehtävä 125-2: Tee numeron luku, joka sallii luvut välillä 1-100 ja nostaa virheen muuten
+
+

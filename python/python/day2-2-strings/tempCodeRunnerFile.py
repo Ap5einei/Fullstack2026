@@ -1,0 +1,2 @@
+aaa = "Aku"
+bbb = "Ankka"

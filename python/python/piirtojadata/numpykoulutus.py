@@ -1,0 +1,128 @@
+
+#
+# numpy koulutus
+#
+
+import matplotlib.pyplot as plt
+import numpy as np
+"""
+# array 
+# Array voi olla yksi arvo
+myarrayA = np.array(123) # yksittäisellä arvolla ei tarvita [] merkkejä
+
+# Array voi olla 1-ulotteinen vektori
+# Tämä on joukko pistearvoja
+myarrayB = np.array([111,222,333,444,555,666])
+print(myarrayB[1]) # toinen elementti
+print(myarrayB[3:5]) # tulostaa neljännen ja viidennen elementin
+
+for laskuri in myarrayB:
+    print(laskuri)
+
+# array voi olla myös vaikkapa kaksiulotteinen vektori
+# Voimme ajatella X ja Y akselien muodostavan pareja.
+# Tässä on kolme lukua kahdessa ulottuvuudessa eli 
+# X-akselilla on luvut 1, 10, ja 100. 
+# Y-akselilla luvut ovat vastaavasti 2, 20 ja 200.
+myarrayC = np.array([[1,10,100],[2,20,200]])
+print(myarrayC[1,2]) # 200 eli toinen akseli, kolmas elementti
+print(myarrayC[0,0:2]) # 1 ja 10 X-akselin ensimmäiset kaksi arvoa
+
+for laskuri in myarrayC:
+    print(laskuri)
+
+# array voi olla myös kolmiulotteinen matriisi
+# Tässä on kaksi kolmessa ulottuvuudessa olevaa vektoria, 
+# kussakin pisteessä on kolme lukua vastaten X, Y ja Z-akseleita
+# eli tässä esitetään 2 kpl kolmessa ulottuvuudessa olevaa vektoria.
+# vektoreilla on alkupiste(X,Y,Z) ja loppupiste (X,Y,Z).
+matriisi = np.array([[[1, 2, 3], [4, 5, 6]], [[4, 2, 2], [4, 5, 6]]])
+#print(matriisi.ndim) # 3 monta ulottuvuutta arrayssa on
+#print(matriisi[0,1]) # [4,5,6] eli ensimmäisen vektorin loppupiste
+#print(matriisi[1,0]) # [4,2,2] eli toisen vektorin alkupiste
+
+
+# array voidaan kopioida. tämä luo uuden uuden arrayn.
+# copy() on deep copy --- KÄYTÄ AINA TÄTÄ KOPIOIDESSASI JOTAIN!
+# view() on shallow copy
+matriisi2 = matriisi.copy()
+
+# array voidaan liittää toiseen
+dummyarrayA = np.array([1,2,3,4,5])
+dummyarrayB = np.array([6,7,8,9,10])
+finalarray = np.concatenate((dummyarrayA,dummyarrayB))
+print(finalarray)
+
+# array voidaan luoda toisesta arraysta
+# numeroarvo jakaa X osaan
+# split ei salli epätasaista jakoa ja array_split sallii 
+anotherfinalarray = np.array_split(finalarray,3) 
+print(anotherfinalarray)
+
+
+# filter on komento, joka käy läpi arrayn ja palauttaa sieltä
+# ne arvot jotka täyttävät jonkun ehdon
+# täytetään esimerkiksi pohja-arvon settamiseen datasetissä
+
+# tässä on filteröintiehto
+# hyväksytään vain numerot, joiden arvo on suurempi kuin 6
+# finalarray nimisestä arraysta
+filtteriehto = finalarray > 6
+
+# kutsutaan filtteröitävää arrayta ehdolla
+haluttuarray = finalarray[filtteriehto]
+haluttuarray2 = finalarray[finalarray > 6]
+print(haluttuarray)
+print(haluttuarray2)
+
+# sattuma
+
+# luodaan 7 kappaletta sattumanvaraisia lukuja
+# joiden arvo on välillä A ja B (kumpikin mukana)
+# sama numero on mahdollinen
+A = 1
+B = 40
+lottorivi = np.random.randint(A,B,size=7)
+print(lottorivi)
+randomnoise = np.random.rand(7)
+print(randomnoise)
+
+# voidaan valita sattumanvarainen arvo arraysta
+print(np.random.choice(lottorivi,replace=False))
+
+# valitaan sattumanvarainen luku välillä 0 ja X-1
+X = 100
+print(np.random.choice(X))
+# valitaan sattumanvarainen luku välillä 1 ja X
+print(np.random.choice(X)+1)
+
+# numpylla voidaan luoda array, jonka alkaa arvolla X ja päättyy arvoon Y-1
+# tämä luo array -5,-4,-3,-2,-1,0,1,2,3,4,5
+vapaamuotoinenarray = np.arange(-5,6)
+
+"""
+
+# jakaumat
+
+# jakauma tarkoittaa tilastollista analyysia tilanteesta, jossa on
+# otanta (suuri joukko havaintoja), joille lasketaan keskiarvo ja hajonta
+# nämä arvot lasketaan kaavoilla, jotka riippuvat valitusta jakaumasta
+# esimerkiksi Poisson käytetään usein odotusaikoja tutkittaessa.
+
+# Tuhat henkeä jonottaa konserttiin (otanta = 1000)
+# keskimääräinen jonotusaika on 10 minuuttia
+# jonotus on Poisson jakauman mukainen
+jonotus = np.random.poisson(lam=10, size=1000)
+
+# Jonotin 8 minuuttia, moniko jonotti minua pitempään?
+# vaatii seabornin asennuksen (pip install seaborn)
+"""
+import seaborn as sns
+sns.histplot(np.random.poisson(lam=10, size=1000), kde=False)
+plt.show()
+# Nyt katsotaan käyrää.... :)
+"""
+
+# numpyssa on monta erilaista jakaumaa
+jakauma = np.random.normal(0)
+

@@ -1,0 +1,19 @@
+Python 108
+==========
+
+and, or ja not
+
+if luku >= 2 and luku <= 4:
+    print("Luku on välillä 2 ja 4")
+	
+
+
+Tehtävä 108-1: Tee ohjelma, joka kysyy luvun ja sanoo että alle 10 on pieni ja että negatiivinen luku on negatiivinen. Muuten luku on suuri.
+
+Tehtävä 108-2: Tee ohjelma, joka ilmoittaa onko syötetty nimi joku Aku Ankan veljenpojista.
+
+Tehtävä 108-3: Tee ohjelma, joka ilmoittaa onko syötetty kokonaisluku jaollinen viidellä.
+
+Tehtävä 108-4: Tee ohjelma, joka laskee onko kyseessä karkausvuosi.
+
+

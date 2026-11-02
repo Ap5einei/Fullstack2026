@@ -1,0 +1,17 @@
+LUOKKA JA OLIO
+==============
+
+class Henkilo:
+  def __init__(self, nimi, ika):
+    self.nimi = nimi
+    self.ika = ika
+
+	def funktio(self):
+		print(self.nimi)
+
+henkilo1 = Henkilo("Aku Ankka", 313)
+print(henkilo1.nimi)
+print(henkilo1.ika) 
+
+p1.funktio()
+

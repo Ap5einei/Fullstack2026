@@ -1,0 +1,130 @@
+
+// miten debugataan?
+
+// 1. Älä hätäile
+// Bugeja tulee aina, joten stoalainen asenne auttaa.
+// Restart, reboot ovat ystäviäsi.
+// --> työkalut voi olla väärin eli bitti vinossa.
+
+// 2. Aloita aina bugin korjaus ENSIMMÄISESTÄ bugista
+// Mene vikalistan alkuun ja katso siitä alaspäin
+// valitse ensimmäinen bugi korjattavaksi
+
+// 3. Korjaa yksi bugi kerrallaan
+// Näin ei synny uutta bugia.
+// Tämä vähentää huonoja korjauksia.            
+// ihminen unohtaa bugikorjatessaan mitä hän muutti.
+// alkuperäinen kommentteihin ja alle muutos.
+// --> voi palata vanhaan tarvittaessa.
+
+// 4. Laita kaikki koodi kommentteihin, sitten avaa pala kerrallaan
+// avaa yksi kokonaisuus kerralla
+// Helpottaa blokkien ja tiedostojen keskinäisten suhteiden vikojen etsintää
+// auttaa myös loogisten vikojen etsinnässä
+// Tällöin joskus auttaa saman koodin uudelleenkirjoittaminen.
+// näkymättömät merkit voivat haitata
+
+// 5. Bugikorjaus keskeytetään, kun se vaatii yli 5 riviä.
+// Kokeile tämä ja sitten jatka korjausta.
+// Tällöin viat löytyvät heti ja nopea jatkuva testaus auttaa.
+
+// 6. Hae apua taliaivo!
+// Koodin selitys toiselle ihmiselle selkeyttää ajattelua.
+// Samalla uusi silmäpari yleensä näkee loogisen ongelman/vian.
+// Jos et osaa selittää koodiasi, olet pulassa. Looginen vika?
+
+// 7. Hengitä syvään!
+// Hae kuppi kahvia, tämä auttaa logiikan mietinnässä ja 
+// selkeyttämisessä itselle.
+
+// Testaus on tärkeää loogisten vikojen etsinnässä...
+// Saatko yleensäkään lukuja?
+// Onko oikea tietotyyppi?
+// Ovatko luvut arvot yleensäkään oikeita?
+
+// Breakpointit
+// haarukoi vikakohta breakpoint joka funktion alkuun
+// breakpoint ENNEN vikakohtaa, tarkista luvut ja etene rivi riviltä
+// työkaluilla löytyy ongelmat, joita konsoli ei kerro
+// (tietotyypit, arrayn pituus, castaus virheet löytyvät)
+// Muista että voit muuttaa työkaluilla arvon toiseksi
+
+// feikkidatan käyttö - mockdata
+// feikki datalla on helppo kokeilla tiedonsiirto ja palautus
+// mahdollistaa ohjelman koodauksen vaikka tietokanta tai palvelin puuttuu
+// viallista dataa voi käyttää
+// Tällöin kokeillaan toimiiko virheiden hallinta (käyttäjä voi kirjoittaa väärin)
+
+// Tarkista mikä on oikea totuus!
+// Totuus löytyy aina tietokannasta
+// Totuus löytyy aina raudalta (rekistereistä)
+// Totuus löytyy aina muistista (muistin lukeminen)
+// lähtee oletuksesta että valmiit osat toimivat oikein
+// Tällöin seurataan datan liike ja oikeellisuus koko ketjusta            
+
+// käytännön JavaScript esimerkki löytyy MDN sivustolta.
+// https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong
+
+// Miten aloititte debuggauksen?
+// aloitin ajamalla softaa ja katsoin konsolia
+// --> Yleensä helpoin tapa aloittaa
+// Kielestä riippuen print ja console.login lisäys auttaa
+// seurattiin reaaliaikaisesti muuttujien arvoja
+// Testauksessa, koko toiminta on testattava loppuun asti
+
+// JUnitin kaltaisia frameworkejä: 
+// NUnit, TestNG, Mockito, Arquillian, and Selenium 
+
+// Miten suunnitellaan?
+
+// YLÄTASON SUUNNITTELU
+
+// 1. Visio eli mitä ollaan tekemässä? (suomeksi johtotähti)
+// Tämä on AINA ensimmäinen kysymys!
+// Mitä yleensä halutaan saada aikaan...
+// Perustuu yleensä asiakkaan tarpeeseen:
+// Miksi asiakas haluaa/haluaisi tämän? (tarvekartoitus)
+
+// 2. Suunnittelu yleistasolla
+// Lähestymistapoja on yleensä kaksi:
+// a) käyttöliittymä eli mitä käyttäjä tekee?
+// b) data eli mitä halutaan kerätä/jalostaa/tallettaa?
+// Tavoite on aina että tiedetään mitä tehdään missäkin vaiheessa
+
+// 3. Käyttäjän toiminta ja yleinen "use case"
+// use case sanoo mitä käyttäjä tekee
+// Tällöin nähdään ohjelman toiminnnan askeleet
+
+// ALATASON SUUNNITTELU
+
+// 4. Mieti ohjelmarunko
+// Yleensä kannattaa ohjelmoida aina samalla tavalla
+// Koodari ja/tai yrityskohtainen asia
+
+// Esimerkiksi:
+// Kirjastot ja Modulit
+// Vakiot
+// Muuttujat
+// Konteksti näytön ja koodin välillä
+// Luokat ja Oliot
+// Funktiot
+// Event handlerien asetukset
+// Datan haku
+// (koodi)
+
+// 5. Mieti ohjelman toiminta
+// Suositan etenemistä kommentit edellä
+// Kirjoita kommenttina mitä teet, sitten koodaat asian
+
+// Periaatteessa koko ohjelman voi kirjoittaa kommentteina
+// Usein tämä on liian raskasta mutta...
+// esim kirjoita:
+// Initialisoi pelin alkuarvot
+// Peliluuppi alkaa
+// Arvioi annettu arvaus
+// Peliluuppi päättyy
+
+// 6. Nyt koodataan...
+// Koodaa yksi asia tai "muutama rivi kerrallaan"
+// Sitten testataan...
+

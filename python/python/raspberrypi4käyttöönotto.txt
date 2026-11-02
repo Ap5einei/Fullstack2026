@@ -1,0 +1,42 @@
+Rasberry Pi 4 käyttöönotto
+==========================
+
+STEP 1: Raspberry PI käyttöön
+
+Raspberry PI kuntoonlaitto.
+https://www.raspberrypi.org/help/videos/
+https://www.raspberrypi.com/documentation/computers/getting-started.html
+
+Katso myös ohjeet:
+https://www.w3schools.com/nodejs/nodejs_raspberrypi.asp
+
+Muista että Raspberry Pi käyttää Linux käyttöjärjestelmää.
+https://lutpub.lut.fi/bitstream/handle/10024/104311/Linux-opas.pdf?sequence=2
+Embedded Linux matreriaalia:
+https://www.seeedstudio.com/blog/2021/01/20/beginners-guide-to-embedded-linux/
+
+Youtubesarja:
+Linux
+https://www.youtube.com/playlist?list=PL_c9BZzLwBRKNJSxrcYQld-3qLQfVMvvP
+C-kieli
+https://www.youtube.com/playlist?list=PL_c9BZzLwBRKKqOc9TJz1pP0ASrxLMtp2
+Raspberry pi ja C-kieli
+https://www.youtube.com/playlist?list=PL-6WIzdGN7xQdIvyCtQUhmflKNsidxfwX
+ 
+
+STEP 2: Rakenna Hello World!
+
+https://linuxhint.com/write-compile-c-program-raspberry-pi/
+
+STEP 3: Ledit vilkkumaan
+
+https://linuxhint.com/gpio-pinout-raspberry-pi/
+
+Tarvitset pigpio kirjaston
+https://www.woolseyworkshop.com/2018/06/20/blink-making-an-led-blink-on-a-raspberry-pi/
+
+Tarvitset wiringPi kirjaston:
+https://www.adeept.com/video/static1/itemsfile/Adeept_Ultimate_Starter_Kit_for_RPi_Manual.pdf
+
+Moodlessa on myös Joy-It materiaali.
+

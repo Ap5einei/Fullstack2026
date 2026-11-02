@@ -1,0 +1,45 @@
+Python 113
+==========
+
+break - hyppää ulos silmukasta
+continue - palaa silmukan alkuun
+
+summa = 0
+while True:
+    luku = int(input("Anna luku "))
+    if luku == -1:
+        break
+    summa += luku
+	
+summa = 0
+luku = 0
+while luku != -1:
+    luku = int(input("Anna luku "))
+    if luku != -1:
+        summa += luku
+
+summa = 0
+while True:
+    luku = int(input("Anna luku "))
+    if luku == -1:
+        break
+    if luku >= 10:
+        continue
+    summa += luku
+
+Monien silmukoiden tapauksessa break hyppää aina seuraavaan ulommaiseen silmukkaan
+
+Tehtävä 113-1: Tee ohjelma, joka laskee kertotaulun lukuun X asti, eli (esim 2) 1x1, 1xX, Xx1, XxX...
+
+Tehtävä 113-2: Tee ohjelma, jolle syötät lauseen. Tulosta jokaisen sanan ensimmäinen kirjain.
+
+Tehtävä 113-3: Tee ohjelma, joka laskee annetun luvun X kertoman (esim 4) 1*2*3*X = ...
+
+Tehtävä 113-4: Tee ohjelma, joka tulostaa kaikki luvut käyttäjän antamaan lukuun asti.
+Tee ohjelma niin, että kukin pari lukuja esitetään suurempi ensin.
+
+Tehtävä 113-5: Tee ohjelma, joka tulostaa kaikki luvut käyttäjän antamaan lukuun asti.
+Tee ohjelma niin, että ensin esitetään 1, sitten X, sitten 2, sitten X-1 jne...
+
+
+

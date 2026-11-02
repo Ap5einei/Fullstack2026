@@ -1,0 +1,45 @@
+python 117
+==========
+
+listat
+
+lista = [12,44,66,44]
+
+for elementti in lista:
+    print(elementti)
+
+for elementti in range(5):
+    print(elementti)
+
+range(2, 5)
+range(2, 10, 2)
+
+lista = list(range(5))
+
+
+Tehtävä 117-1: Tulosta merkkijono niin että kukin kirjain tulee omalle rivilleen ja kirjainten väliin tulee "%" merkki.
+
+Tehtävä 117-2: Tulosta luku niin että luku pienenee luvusta -lukuun asti.
+
+Tehtävä 117-3: Tulosta "*" niin, että kullekin riville tulee se lukumäärä, joka on listan elementti.
+
+Tehtävä 117-4: ilmoita onko merkkijono anagrammi (täsmälleen samat kirjaimet) toisen merkkijonon kanssa
+
+Tehtävä 117-5: ilmoita onko merkkijono palindromi (täsmälleen sama käännettynä toisinpäin) toisen merkkijonon kanssa
+
+Tehtävä 117-6: laske yhteen ainoastaan negatiiviset numerot, jotka ovat listassa.
+
+Tehtävä 117-7: ilmoita parilliset luvut listasta.
+
+Tehtävä 117-8: Laske yhteen kahden listan elementit.
+
+Tehtävä 117-9: Hae listasta ne elementit, joille ei ole paria.
+
+Tehtävä 117-10: Ilmoita lyhin listan merkkijono
+
+Tehtävä 117-11: Ilmoita pisimmän listan merkkijonon pituus ja näytä se
+
+
+
+
+

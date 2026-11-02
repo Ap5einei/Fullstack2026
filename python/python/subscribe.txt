@@ -1,0 +1,197 @@
+
+
+luokka huone:
+    hahmot<npcchar>[]
+    addchar(char)
+        hahmot.append(char)
+    delchar(char)
+        hahmot.append(char)
+    explode(damage)
+        for (hahmo in hahmot)
+            if hahmo.armor 
+                hahmo.health -= damage/10
+            else
+                hahmo.health -= damage
+        if (hahmo.health <= 0)
+            delchar(hahmo)
+
+luokka char:
+    health = 0
+    armor = False
+
+luokka npcchar extends char:
+    health = 25
+
+luokka bosschar extends char:
+    health = 100
+    armor = true
+
+badenemy = NPCChar()
+myhuone = Huone()
+
+myhuone.addchar(badenemy)
+
+=========================================
+
+entä jos erityyppisiä huoneita?
+luokka huone:
+    hahmot<npcchar>[]
+    addchar(char)
+        hahmot.append(char)
+    delchar(char)
+        hahmot.append(char)
+    säännöt()
+        explode = null
+        move = null
+    update()
+        if this.explode
+            this.explode.update(hahmot, arg)       
+        if this.move
+            this.move.update()
+
+
+luokka sisähuone extends huone:
+    constructor()
+        this.explode = new explode()    
+        this.move = new movesquare()
+
+luokka ulkohuone extends huone:
+    constructor()
+        this.move = new movehexes()
+
+luokka meri extends huone:
+    constructor()
+        this.move = new swiminsea()
+
+
+luokka sääntö:
+    update(hahmot[],arg[])
+
+luokka explode extends sääntö:
+    update(hahmot, arg[0])
+        damage = arg[0]
+        for (hahmo in hahmot)
+            if hahmo.armor 
+                hahmo.health -= damage/10
+            else
+                hahmo.health -= damage
+        if (hahmo.health <= 0)
+            delchar(hahmo)
+
+==========================================
+luodaan kolme perusasiaa:
+    hahmo
+    tila
+    sääntö
+    messagesystem
+
+luokka hahmo:
+    health = 0
+    armor = False
+
+luokka npcchar extends hahmo:
+    health = 25
+
+luokka bosschar extends hahmo:
+    health = 100
+    armor = True
+
+luokka tila:
+    id = 0
+    hahmot<hahmo>[]
+    addchar(char)
+        hahmot.append(char)
+    delchar(char)
+        hahmot.append(char)
+    säännöt()
+        fire = null
+        explode = null
+        move = null
+    update()
+        if fire
+            this.fire.execute(hahmot)    
+        if explode
+            this.explode.execute(hahmot)    
+        if move
+            this.move.execute(hahmot)    
+
+luokka öljyvarasto extends tila:
+    constructor(id)
+        this.id = id
+        this.fire = new hugefiresääntö()
+        this.move = normalmovesääntö()
+
+luokka varasto extends tila:
+    constructor(id)
+        this.id = id
+        this.fire = new smallfiresääntö()
+        this.move = new normalmovesääntö()
+
+luokka huone extends tila:
+    constructor(id)
+        this.id = id
+        this.move = new normalmovesääntö()
+
+
+luokka sääntö:
+    execute(hahmot)
+
+luokka smallfiresääntö extends sääntö
+    execute(hahmot)
+        for (hahmo in hahmot)
+            if hahmo.armor == False
+                hahmo.health -= 10            
+
+luokka hugefiresääntö extends sääntö
+    execute(hahmot)
+        for (hahmo in hahmot)
+            if hahmo.armor == False
+                hahmo.health -= 20            
+            else:
+                hahmo.health -= 5            
+
+Oletetaan että meillä on tilakone
+
+FSM
+    constructor(id, class)
+        this.tila = new class(id)
+        this.tila.hahmot = null
+        this.entertila(id)
+
+    update()
+        this.tila.update(hahmot)
+
+    entertila(id)
+        this.tila.hahmot.append(lisääviholliset(id))
+
+    leavetila(newid)
+        myFSM = FSM(newid,varasto)
+
+
+lisääviholliset(id)
+    viholliset = []
+    vihollislista = readenemyjson(id)
+    for vihollinen in vihollislista:
+        switch(vihollinen.type)
+            case 100:
+                viholliset.append(new npcchar(vihollinen.x,vihollinen.y))
+                return
+            case 101:
+                viholliset.append(new bosschar)
+                return
+            case 102:
+                viholliset.append(new superbosschar)
+                return
+    return vihollislista
+
+myFSM = FSM(1,varasto)
+
+
+
+
+
+
+
+
+
+

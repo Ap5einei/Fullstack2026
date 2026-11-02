@@ -1,0 +1,39 @@
+Python 115
+==========
+
+funktiolla voi olla paluuarvo ja sen suositeltu tietotyyppi voidaan määrittää:
+
+def funktionnimi(muuttuja):
+	return muuttuja += 1234
+
+def funktionnimi(muuttuja:int):
+	return muuttuja += 1234
+
+def funktionnimi(muuttuja:int) -> int:
+	return muuttuja += 1234
+
+
+Seuraavaksi kutsutaan funktioita toisista funktioista.
+
+Tehtävä 115-1: Tee ohjelma, jonka funktio palauttaa anntuista parametreista pienimmän
+
+Tehtävä 115-2: Tee ohjelma, jonka funktio ilmoittaa onko annettu merkki sama tai ei (True tai false)
+
+Tehtävä 115-3: Tee ohjelma, jossa
+on funktio, joka piirtää parametrina annettua merkkiä annetun luvun verran.
+Tee funktio joka piirtää näin neliön annettua merkkiä.
+
+Tehtävä 115-4: Tee ohjelma, jossa
+on funktio, joka piirtää parametrina annettua merkkiä annetun luvun verran.
+Tee funktio joka piirtää näin nelikulmion annettua merkkiä.
+
+Tehtävä 115-5: Tee ohjelma, joka piirtää funktiossa joulukuusen "*" merkeillä.
+Tee toinen funktio, joka antaa sille parametrit
+
+Tehtävä 115-6: Tee ohjelma, joka piirtää funktioilla nelikulmioita ja joulukuusia.
+Tee toinen funktio, joka antaa sille parametrit ja piirrä erilaisia muotoja.
+
+
+
+
+

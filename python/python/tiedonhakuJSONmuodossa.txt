@@ -1,0 +1,190 @@
+Haetaan tietoa Helsingin kaupungin kansliasta:
+
+STEP 1) Lisää ja asenna requests kirjasto
+Käytä käskyä: pip install requests
+
+STEP 2) kirjoita Python ohjelma, jolla haet tiedot.
+https://stat.hel.fi:443/api/v1/fi/Hyvinvointitilastot/Lasten_ja_nuorten_hyvinvointi/1_Vaesto_ja_elinolot/VE01_lastenmaara.px
+
+ja käytä json tietoa:
+{
+  "query": [
+    {
+      "code": "Ikä",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "0-2-VUOTIAAT"
+        ]
+      }
+    },
+    {
+      "code": "Vuosi",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "23"
+        ]
+      }
+    }
+  ],
+  "response": {
+    "format": "json-stat"
+  }
+}
+
+lopullinen koodi toimii seuraavasti:
+
+import requests
+
+url = "https://stat.hel.fi:443/api/v1/fi/Hyvinvointitilastot/Lasten_ja_nuorten_hyvinvointi/1_Vaesto_ja_elinolot/VE01_lastenmaara.px"
+
+myobj = {
+  "query": [
+    {
+      "code": "Ikä",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "0-2-VUOTIAAT"
+        ]
+      }
+    },
+    {
+      "code": "Vuosi",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "23"
+        ]
+      }
+    }
+  ],
+  "response": {
+    "format": "json-stat"
+  }
+}
+
+x = requests.post(url, json = myobj)
+
+print(x.text)
+
+Jomnka seurauksena sain seuraavan json sisällön:
+{"dataset":{"dimension":{"Sukupuoli":{"label":"Sukupuoli","category":{"index":{"ALL":0,"1":1,"2":2},"label":{"ALL":"Molemmat sukupuolet","1":"Miehet","2":"Naiset"}},"extension":{"show":"value"}},"Ikä":{"label":"Ikä","category":{"index":{"0-2-VUOTIAAT":0},"label":{"0-2-VUOTIAAT":"0-2-vuotiaat"}},"extension":{"show":"value"}},"Äidinkieli":{"label":"Äidinkieli","category":{"index":{"ALL":0,"1":1,"2":2,"3":3},"label":{"ALL":"Kaikki äidinkielet","1":"Suomi ja saame","2":"Ruotsi","3":"Muu kieli"}},"extension":{"show":"value"}},"Vuosi":{"label":"Vuosi","category":{"index":{"23":0},"label":{"23":"2022"}},"extension":{"show":"value"}},"id":["Sukupuoli","Ikä","Äidinkieli","Vuosi"],"size":[3,1,4,1],"role":{"time":["Vuosi"]}},"label":"Helsinkiläisten lasten määrä ikäluokittain 31.12. muuttujina Sukupuoli, Ikä, Äidinkieli ja Vuosi","source":"Lasten hyvinvointi/Helsingin kaupunki","updated":"9999-12-31T21:59:59Z","value":[18852,13479,1417,3956,9735,6961,711,2063,9117,6518,706,1893],"extension":{"px":{"decimals":0}}}}
+
+Se menee kauniina seuraavasti:
+{
+  "dataset": {
+    "dimension": {
+      "Sukupuoli": {
+        "label": "Sukupuoli",
+        "category": {
+          "index": {
+            "1": 1,
+            "2": 2,
+            "ALL": 0
+          },
+          "label": {
+            "1": "Miehet",
+            "2": "Naiset",
+            "ALL": "Molemmat sukupuolet"
+          }
+        },
+        "extension": {
+          "show": "value"
+        }
+      },
+      "Ikä": {
+        "label": "Ikä",
+        "category": {
+          "index": {
+            "0-2-VUOTIAAT": 0
+          },
+          "label": {
+            "0-2-VUOTIAAT": "0-2-vuotiaat"
+          }
+        },
+        "extension": {
+          "show": "value"
+        }
+      },
+      "Äidinkieli": {
+        "label": "Äidinkieli",
+        "category": {
+          "index": {
+            "1": 1,
+            "2": 2,
+            "3": 3,
+            "ALL": 0
+          },
+          "label": {
+            "1": "Suomi ja saame",
+            "2": "Ruotsi",
+            "3": "Muu kieli",
+            "ALL": "Kaikki äidinkielet"
+          }
+        },
+        "extension": {
+          "show": "value"
+        }
+      },
+      "Vuosi": {
+        "label": "Vuosi",
+        "category": {
+          "index": {
+            "23": 0
+          },
+          "label": {
+            "23": "2022"
+          }
+        },
+        "extension": {
+          "show": "value"
+        }
+      },
+      "id": [
+        "Sukupuoli",
+        "Ikä",
+        "Äidinkieli",
+        "Vuosi"
+      ],
+      "size": [
+        3,
+        1,
+        4,
+        1
+      ],
+      "role": {
+        "time": [
+          "Vuosi"
+        ]
+      }
+    },
+    "label": "Helsinkiläisten lasten määrä ikäluokittain 31.12. muuttujina Sukupuoli, Ikä, Äidinkieli ja Vuosi",
+    "source": "Lasten hyvinvointi/Helsingin kaupunki",
+    "updated": "9999-12-31T21:59:59Z",
+    "value": [
+      18852,
+      13479,
+      1417,
+      3956,
+      9735,
+      6961,
+      711,
+      2063,
+      9117,
+      6518,
+      706,
+      1893
+    ],
+    "extension": {
+      "px": {
+        "decimals": 0
+      }
+    }
+  }
+}
+
+tallensin koko roskan hesa.json nimiseen tiedostoon.
+
+Nyt minulla on kiva datasetti
