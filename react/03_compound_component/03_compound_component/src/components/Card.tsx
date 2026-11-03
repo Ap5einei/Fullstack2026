@@ -12,6 +12,16 @@ const Card = () => {
         color:"red"
     })
 
+    const onColorChange = () => {
+        let color = "#";
+        const letters ="ABCDEF0123456789";
+        for(let i = 0; i<6; i++){
+            const temp = Math.floor(Math.random()*16);
+            color = color + letters[temp];
+        }
+        setState({color:color});
+    }
+
     const cardStyle:React.CSSProperties = {
         height:200,
         width: 150,
