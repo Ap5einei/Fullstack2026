@@ -1,11 +1,15 @@
-import{useNavigate} from 'react-router';
+import {useNavigate} from 'react-router';
 
 const About = () => {
-    const navigate = useNavigate();
-    return(
-        <>
-            <h2>This is the About page</h2>
-            <button onClick ={() => navigate ("/secret")}>Go to secret page</button>        
-        </>
-    )
+	
+	const navigate = useNavigate();
+	
+	return(
+		<>
+			<h2>We test the basic functions of React Router</h2>
+			<button onClick={() => navigate("/secret")}>Go to secret page</button>
+		</>
+	)
 }
+
+export default About;
