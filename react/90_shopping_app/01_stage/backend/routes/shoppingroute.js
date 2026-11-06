@@ -33,7 +33,6 @@ router.post("/shopping", function(req, res) {
         return res.status(201).json(savedItem);
     }).catch(function(err) {
         console.log("Failed to add new item. Reason", err);
-        // KORJATTU: Vaihdettu pilkku pisteeksi ennen .json-sanaa
         return res.status(500).json({ "message": "Internal Server Error" });
     });
 });
@@ -51,7 +50,6 @@ router.delete("/shopping/:id", function(req, res) {
 // PUT: Muokkaa/korvaa tuote ID:n perusteella
 router.put("/shopping/:id", function(req, res) {
     if (!req.body) {
-        // KORJATTU: Kirjoitusvirhe "Bad Reques" -> "Bad Request"
         return res.status(400).json({ "message": "Bad Request" });
     }
     if (!req.body.type) {
@@ -64,7 +62,6 @@ router.put("/shopping/:id", function(req, res) {
         price: req.body.price
     };
     
-    // KORJATTU: Kirjoitusvirhe repcaleOne -> replaceOne
     itemModel.replaceOne({ "_id": req.params.id }, item).then(function() {
          return res.status(200).json({ "message": "Success" });
     }).catch(function(err) {
