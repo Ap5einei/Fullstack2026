@@ -6,4 +6,4 @@ const Schema = mongoose.Schema({
     price:Number
 })
 
-module.export = mongoose.model("Item",Schema);
+module.exports = mongoose.model("Item",Schema);
