@@ -11,7 +11,7 @@ const NavBar =() => {
                     <Link to = "/" className = "nav-link"> Shopping List </Link>
                 </li>
                 <li className="nav-item" style ={{marginLeft:10}}>
-                    <Link to = "/" className = "nav-link"> ADD new item </Link>
+                    <Link to = "/" className = "nav-link"> Add new item </Link>
                 </li>
             </ul>
         </nav>
